@@ -25,6 +25,6 @@ consistent, and reasonably well performing.
 
 See the LICENSE file for full details.
 
-Copyright (c) 2015 The Rust Project Developers
-Copyright (c) 2022 Kevin Heavey
-Copyright (c) 2024 Ritvik Nag
+> Copyright (c) 2015 The Rust Project Developers
+> Copyright (c) 2022 Kevin Heavey
+> Copyright (c) 2024 Ritvik Nag
