@@ -1,6 +1,6 @@
 # PySpellCraft
 
-`spellcraft` is a helper library with useful spells, primarily used by the [Dataclass Wizard].
+`spellcraft` is a helper library that contains useful functions and "spells," primarily designed for use with [Dataclass Wizard].
 
 This library exists to provide case conversion between common cases like
 CamelCase and snake_case. It is intended to be unicode aware, internally
@@ -21,12 +21,10 @@ consistent, and reasonably well performing.
 
 ## License
 
-`spellcraft` is distributed under the terms of the MIT license.
+`spellcraft` is distributed under the terms of the MIT License.
 
-See LICENSE for details.
+See the LICENSE file for full details.
 
 Copyright (c) 2015 The Rust Project Developers
-
 Copyright (c) 2022 Kevin Heavey
-
 Copyright (c) 2024 Ritvik Nag
