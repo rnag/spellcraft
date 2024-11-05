@@ -27,5 +27,6 @@ changelog = "https://github.com/rnag/spellcraft/blob/main/CHANGELOG.md"
 dev = [
     "pytest>=7.0",
     "maturin>=1.7,<2.0",
+    "bump2version",
     # Add any other dev dependencies here
 ]
