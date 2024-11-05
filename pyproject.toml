@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "spellcraft"
-version = "0.0.1"
+version = "0.1.0"
 requires-python = ">=3.9"
 description = "spellcraft is a helper library containing useful functions and spells, primarily designed for use by Dataclass Wizard."
 authors = [{ name = "rnag", email = "me@ritviknag.com" }]
