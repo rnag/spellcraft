@@ -1,0 +1,31 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "spellcraft"
+version = "0.0.1"
+requires-python = ">=3.9"
+description = "spellcraft is a helper library with useful spells, primarily used by Dataclass Wizard."
+authors = [{ name = "rnag", email = "me@ritviknag.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[project.urls]
+homepage = "https://github.com/rnag/spellcraft"
+documentation = "https://rnag.github.io/spellcraft/"
+repository = "https://github.com/rnag/spellcraft"
+changelog = "https://github.com/rnag/spellcraft/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "maturin>=1.7,<2.0",
+    # Add any other dev dependencies here
+]
