@@ -24,6 +24,7 @@ repository = "https://github.com/rnag/spellcraft"
 changelog = "https://github.com/rnag/spellcraft/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
+# Development dependencies
 dev = [
     "maturin>=1.7,<2.0",
     "black~=24.10.0",
@@ -31,9 +32,15 @@ dev = [
     "pytest~=8.3.3",
     "pytest-benchmark~=5.1.0",
     "flake8~=7.1.1",
+    "bump2version~=1.0.1",
+    # Sphinx-related dependencies
     "Sphinx~=8.1.3",
     "sphinx-autobuild==2024.10.3",
     "sphinx-rtd-theme~=3.0.1",
-    "bump2version~=1.0.1",
-    # Add any other dev dependencies here
+]
+
+sphinx = [
+    "Sphinx~=8.1.3",
+    "sphinx-autobuild==2024.10.3",
+    "sphinx-rtd-theme~=3.0.1",
 ]
