@@ -9,7 +9,7 @@
 <!-- [![Coverage Status](https://coveralls.io/repos/github/rnag/spellcraft/badge.svg?branch=main)](https://coveralls.io/github/rnag/spellcraft?branch=main) -->
 <!-- [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) -->
 
-`SpellCraft` is a helper library that contains useful functions and "spells," primarily designed for use with [Dataclass Wizard].
+**SpellCraft** is a helper library that contains useful functions and "spells", primarily designed for use by [Dataclass Wizard].
 
 [Read the documentation.]
 
@@ -22,8 +22,8 @@
 pip install spellcraft
 ```
 
-.. note:
-    Note: requires Python >= 3.9.
+> [!NOTE]
+> Requires Python >= 3.9.
 
 ## Example
 

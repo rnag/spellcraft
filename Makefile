@@ -14,7 +14,8 @@ fmt:
 
 serve: ## generate Sphinx HTML documentation
 	$(MAKE) -C docs clean
-	$(MAKE) -C docs html
+	maturin build --out dist
+	pip install spellcraft --no-index --find-links dist --force-reinstall
 	sphinx-autobuild docs _build/html --open-browser
 
 bench:

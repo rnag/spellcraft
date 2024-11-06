@@ -1,6 +1,5 @@
-//! **spellcraft** is a utility or "helper" library primarily designed
-//! for use in the [dataclass-wizard] library, facilitating
-//! various case conversions.
+//! **spellcraft** is a utility or "helper" library that contains useful
+//! functions and "spells", primarily designed for use by [`dataclass-wizard`].
 //!
 //! This library aims to be Unicode-aware, internally consistent,
 //! and reasonably performant, providing convenient case conversion
@@ -17,7 +16,7 @@
 //! 7. SHOUTY-KEBAB-CASE
 //! 8. Train-Case
 //!
-//! [dataclass-wizard]: https://dataclass-wizard.readthedocs.io/
+//! [`dataclass-wizard`]: https://dataclass-wizard.readthedocs.io/
 //!
 #![deny(missing_docs)]
 #![forbid(unsafe_code)]
@@ -63,28 +62,22 @@ use pyo3::prelude::*;
 fn spellcraft(m: &Bound<'_, PyModule>) -> PyResult<()> {
     // m.add_function(wrap_pyfunction!(sum, m)?)?;
     m.add_function(wrap_pyfunction!(snake, m)?)?;
-    // m.add_function(wrap_pyfunction!(snake_many, m)?)?;
+    m.add_function(wrap_pyfunction!(snake_many, m)?)?;
     m.add_function(wrap_pyfunction!(lower_camel, m)?)?;
-    // m.add_function(wrap_pyfunction!(lower_camel_many, m)?)?;
+    m.add_function(wrap_pyfunction!(lower_camel_many, m)?)?;
     m.add_function(wrap_pyfunction!(title, m)?)?;
-    // m.add_function(wrap_pyfunction!(title_many, m)?)?;
+    m.add_function(wrap_pyfunction!(title_many, m)?)?;
     m.add_function(wrap_pyfunction!(upper_camel, m)?)?;
-    // m.add_function(wrap_pyfunction!(upper_camel_many, m)?)?;
+    m.add_function(wrap_pyfunction!(upper_camel_many, m)?)?;
     m.add_function(wrap_pyfunction!(kebab, m)?)?;
-    // m.add_function(wrap_pyfunction!(kebab_many, m)?)?;
+    m.add_function(wrap_pyfunction!(kebab_many, m)?)?;
     m.add_function(wrap_pyfunction!(shouty_kebab, m)?)?;
-    // m.add_function(wrap_pyfunction!(shouty_kebab_many, m)?)?;
+    m.add_function(wrap_pyfunction!(shouty_kebab_many, m)?)?;
     m.add_function(wrap_pyfunction!(shouty_snake, m)?)?;
-    // m.add_function(wrap_pyfunction!(shouty_snake_many, m)?)?;
+    m.add_function(wrap_pyfunction!(shouty_snake_many, m)?)?;
 
     Ok(())
 }
-
-/// Finds the sum of two numbers.
-// #[pyfunction]
-// fn sum(a: i32, b: i32) -> PyResult<i32> {
-//     Ok(a + b)
-// }
 
 /// Convert to snake_case.
 ///
@@ -108,11 +101,13 @@ fn snake(s: &str) -> String {
 ///     >>> from spellcraft import snake_many
 ///     >>> snake_many(["DeviceType", "fooBar"])
 ///     ['device_type', 'foo_bar']
-// #[pyfunction]
-// #[pyo3(text_signature = "(strings)")]
-// fn snake_many(strings: Vec<&str>) -> Vec<String> {
-//     strings.par_iter().map(|s| s.to_snake_case()).collect()
-// }
+#[pyfunction]
+#[pyo3(text_signature = "(strings)")]
+fn snake_many(strings: Vec<String>) -> Vec<String> {
+    // TODO
+    strings.iter().map(|s| s.to_snake_case()).collect()
+    // strings.par_iter().map(|s| s.to_snake_case()).collect()
+}
 
 /// Convert to lowerCamelCase.
 ///
@@ -138,14 +133,16 @@ fn lower_camel(s: &str) -> String {
 ///     >>> from spellcraft import lower_camel_many
 ///     >>> lower_camel_many(["It is we", "who built these"])
 ///     ['itIsWe', 'whoBuiltThese']
-// #[pyfunction]
-// #[pyo3(text_signature = "(strings)")]
-// fn lower_camel_many(strings: Vec<&str>) -> Vec<String> {
-//     strings
-//         .par_iter()
-//         .map(|s| s.to_lower_camel_case())
-//         .collect()
-// }
+#[pyfunction]
+#[pyo3(text_signature = "(strings)")]
+fn lower_camel_many(strings: Vec<String>) -> Vec<String> {
+    strings.iter().map(|s| s.to_lower_camel_case()).collect()
+
+    // strings
+    //     .par_iter()
+    //     .map(|s| s.to_lower_camel_case())
+    //     .collect()
+}
 
 /// Convert to Title Case.
 ///
@@ -171,11 +168,12 @@ fn title(s: &str) -> String {
 ///     >>> from spellcraft import title_many
 ///     >>> title_many(["We have always", "lived in slums"])
 ///     ['We Have Always', 'Lived In Slums']
-// #[pyfunction]
-// #[pyo3(text_signature = "(strings)")]
-// fn title_many(strings: Vec<&str>) -> Vec<String> {
-//     strings.par_iter().map(|s| s.to_title_case()).collect()
-// }
+#[pyfunction]
+#[pyo3(text_signature = "(strings)")]
+fn title_many(strings: Vec<String>) -> Vec<String> {
+    strings.iter().map(|s| s.to_title_case()).collect()
+    // strings.par_iter().map(|s| s.to_title_case()).collect()
+}
 
 /// Convert to UpperCamelCase.
 ///
@@ -201,14 +199,15 @@ fn upper_camel(s: &str) -> String {
 ///     >>> from spellcraft import upper_camel_many
 ///     >>> upper_camel_many(["We are not", "in the least"])
 ///     ['WeAreNot', 'InTheLeast']
-// #[pyfunction]
-// #[pyo3(text_signature = "(strings)")]
-// fn upper_camel_many(strings: Vec<&str>) -> Vec<String> {
-//     strings
-//         .par_iter()
-//         .map(|s| s.to_upper_camel_case())
-//         .collect()
-// }
+#[pyfunction]
+#[pyo3(text_signature = "(strings)")]
+fn upper_camel_many(strings: Vec<String>) -> Vec<String> {
+    strings.iter().map(|s| s.to_snake_case()).collect()
+    // strings
+    //     .par_iter()
+    //     .map(|s| s.to_upper_camel_case())
+    //     .collect()
+}
 
 /// Convert to kebab-case.
 ///
@@ -232,11 +231,12 @@ fn kebab(s: &str) -> String {
 ///     >>> from spellcraft import kebab_many
 ///     >>> kebab_many(["We are going", "to inherit the earth."])
 ///     ['we-are-going', 'to-inherit-the-earth']
-// #[pyfunction]
-// #[pyo3(text_signature = "(strings)")]
-// fn kebab_many(strings: Vec<&str>) -> Vec<String> {
-//     strings.par_iter().map(|s| s.to_kebab_case()).collect()
-// }
+#[pyfunction]
+#[pyo3(text_signature = "(strings)")]
+fn kebab_many(strings: Vec<String>) -> Vec<String> {
+    strings.iter().map(|s| s.to_kebab_case()).collect()
+    // strings.par_iter().map(|s| s.to_kebab_case()).collect()
+}
 
 /// Convert to SHOUTY-KEBAB-CASE.
 ///
@@ -262,14 +262,16 @@ fn shouty_kebab(s: &str) -> String {
 ///     >>> from spellcraft import shouty_kebab_many
 ///     >>> shouty_kebab_many(["We are going", "to inherit the earth."])
 ///     ['WE-ARE-GOING', 'TO-INHERIT-THE-EARTH']
-// #[pyfunction]
-// #[pyo3(text_signature = "(strings)")]
-// fn shouty_kebab_many(strings: Vec<&str>) -> Vec<String> {
-//     strings
-//         .par_iter()
-//         .map(|s| s.to_shouty_kebab_case())
-//         .collect()
-// }
+#[pyfunction]
+#[pyo3(text_signature = "(strings)")]
+fn shouty_kebab_many(strings: Vec<String>) -> Vec<String> {
+    strings.iter().map(|s| s.to_shouty_kebab_case()).collect()
+
+    // strings
+    //     .par_iter()
+    //     .map(|s| s.to_shouty_kebab_case())
+    //     .collect()
+}
 
 /// Convert to SHOUTY_SNAKE_CASE.
 ///
@@ -295,14 +297,15 @@ fn shouty_snake(s: &str) -> String {
 ///     >>> from spellcraft import shouty_snake_many
 ///     >>> shouty_snake_many(["That world is", "growing in this minute."])
 ///     ['THAT_WORLD_IS', 'GROWING_IN_THIS_MINUTE']
-// #[pyfunction]
-// #[pyo3(text_signature = "(strings)")]
-// fn shouty_snake_many(strings: Vec<&str>) -> Vec<String> {
-//     strings
-//         .par_iter()
-//         .map(|s| s.to_shouty_snake_case())
-//         .collect()
-// }
+#[pyfunction]
+#[pyo3(text_signature = "(strings)")]
+fn shouty_snake_many(strings: Vec<String>) -> Vec<String> {
+    strings.iter().map(|s| s.to_shouty_snake_case()).collect()
+    // strings
+    //     .par_iter()
+    //     .map(|s| s.to_shouty_snake_case())
+    //     .collect()
+}
 
 fn transform<F, G>(
     s: &str,

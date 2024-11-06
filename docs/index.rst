@@ -10,9 +10,37 @@ PySpellCraft
 .. `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 .. documentation for details.
 
-**spellcraft** is a utility or "helper" library primarily designed
-for use in the `dataclass-wizard <https://dataclass-wizard.readthedocs.io>`_ library, facilitating
-various case conversions.
+.. _PyPI version badge:
+   https://pypi.org/project/spellcraft/
+
+.. image:: https://img.shields.io/pypi/v/spellcraft.svg
+   :target: https://pypi.org/project/spellcraft/
+
+.. _Python versions badge:
+   https://pypi.org/project/spellcraft/
+
+.. image:: https://img.shields.io/pypi/pyversions/spellcraft.svg
+   :target: https://pypi.org/project/spellcraft/
+
+.. _Docs Status badge:
+   https://ritviknag.com/spellcraft/
+
+.. image:: https://github.com/rnag/spellcraft/actions/workflows/docs.yml/badge.svg
+   :target: https://ritviknag.com/spellcraft/
+
+.. _Build Status badge:
+   https://github.com/rnag/spellcraft/actions/workflows/build-and-release.yml/badge.svg
+   :target: https://github.com/rnag/spellcraft/actions/workflows/build-and-release.yml
+
+.. _License badge:
+   https://img.shields.io/pypi/l/spellcraft.svg
+   :target: https://github.com/rnag/spellcraft/blob/main/LICENSE
+
+.. image:: https://img.shields.io/pypi/l/spellcraft.svg
+   :target: https://github.com/rnag/spellcraft/blob/main/LICENSE
+
+**spellcraft** is a helper library that contains useful functions and "spells", primarily designed
+for use by `Dataclass Wizard <https://dataclass-wizard.readthedocs.io>`_.
 
 This library aims to be Unicode-aware, internally consistent,
 and reasonably performant, providing convenient case conversion
@@ -60,3 +88,10 @@ API
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+.. toctree::
+    :caption: Changes and License
+    :maxdepth: 1
+
+    change-log
+    license
