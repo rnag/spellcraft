@@ -1,31 +1,58 @@
-# spellcraft
+# PySpellCraft
 
 [![PyPI version](https://img.shields.io/pypi/v/spellcraft.svg)](https://pypi.org/project/spellcraft/)
 [![Python versions](https://img.shields.io/pypi/pyversions/spellcraft.svg)](https://pypi.org/project/spellcraft/)
-[![Documentation Status](https://readthedocs.org/projects/spellcraft/badge/?version=latest)](https://spellcraft.readthedocs.io/en/latest/)
-[![Build Status](https://github.com/rnag/spellcraft/workflows/build-and-release/badge.svg)](https://github.com/rnag/spellcraft/actions)
+[![Docs Status](https://github.com/rnag/spellcraft/actions/workflows/docs.yml/badge.svg)](https://ritviknag.com/spellcraft/)
+[![Build Status](https://github.com/rnag/spellcraft/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/rnag/spellcraft/actions/workflows/build-and-release.yml)
 <!-- [![Coverage Status](https://coveralls.io/repos/github/rnag/spellcraft/badge.svg?branch=main)](https://coveralls.io/github/rnag/spellcraft?branch=main) -->
 [![License](https://img.shields.io/pypi/l/spellcraft.svg)](https://github.com/rnag/spellcraft/blob/main/LICENSE)
 <!-- [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) -->
 
-`spellcraft` is a helper library that contains useful functions and "spells," primarily designed for use with [Dataclass Wizard].
+`SpellCraft` is a helper library that contains useful functions and "spells," primarily designed for use with [Dataclass Wizard].
 
-This library exists to provide case conversion between common cases like
-CamelCase and snake_case. It is intended to be unicode aware, internally
-consistent, and reasonably well performing.
+[Read the documentation.]
 
-[Dataclass Wizard]: https://dataclass-wizard.readthedocs.io/
+[Read the documentation.]: https://ritviknag.com/spellcraft/
+[Dataclass Wizard]: https://dataclass-wizard.readthedocs.io
 
-## Cases contained in this library:
+## Installation
 
-1. UpperCamelCase
-2. lowerCamelCase
-3. snake_case
-4. kebab-case
-5. SHOUTY_SNAKE_CASE
-6. Title Case
-7. SHOUTY-KEBAB-CASE
-8. Train-Case
+```
+pip install spellcraft
+```
+
+.. note:
+    Note: requires Python >= 3.9.
+
+## Example
+
+```python
+>>> from spellcraft import snake
+>>> snake("We carry a new world here, in our hearts.")
+'we_carry_a_new_world_here_in_our_hearts'
+```
+
+## Development
+
+### Setup
+
+1. Activate a virtual environment:
+
+```sh
+python -m venv .venv
+source .venv/bin/activate
+```
+
+2. Install dev dependencies:
+
+```
+pip install .[dev]
+```
+
+### Testing
+
+1. Run `maturin develop` to compile the Rust code.
+2. Run `make fmt`, `make lint`, and `make test`.
 
 ## License
 

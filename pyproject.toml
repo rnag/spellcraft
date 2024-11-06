@@ -10,9 +10,18 @@ description = "spellcraft is a helper library containing useful functions and sp
 authors = [{ name = "rnag", email = "me@ritviknag.com" }]
 license = { file = "LICENSE" }
 classifiers = [
-    "Programming Language :: Rust",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    # Optional: for reference, though not an official PyPI classifier
+    "Programming Language :: Rust",
 ]
 [tool.maturin]
 features = ["pyo3/extension-module"]

@@ -30,9 +30,6 @@ Supported Cases
 7. SHOUTY-KEBAB-CASE
 8. Train-Case
 
-
-PySpellCraft is a case conversion library.
-
 .. PySpellCraft is merely a wrapper around a Rust library `heck <https://docs.rs/heck/latest/heck/>`_.
 .. Most of this documentation is copied lovingly from the ``heck`` docs.
 
