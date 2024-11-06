@@ -15,7 +15,7 @@ use crate::{capitalize, transform};
 /// ## Example:
 ///
 /// ```rust
-/// use heck::ToUpperCamelCase;
+/// use spellcraft::ToUpperCamelCase;
 ///
 /// let sentence = "We are not in the least afraid of ruins.";
 /// assert_eq!(sentence.to_upper_camel_case(), "WeAreNotInTheLeastAfraidOfRuins");
@@ -49,7 +49,7 @@ impl<T: ?Sized + ToUpperCamelCase> ToPascalCase for T {
 /// ## Example:
 ///
 /// ```
-/// use heck::AsUpperCamelCase;
+/// use spellcraft::AsUpperCamelCase;
 ///
 /// let sentence = "We are not in the least afraid of ruins.";
 /// assert_eq!(format!("{}", AsUpperCamelCase(sentence)), "WeAreNotInTheLeastAfraidOfRuins");

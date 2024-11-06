@@ -12,7 +12,7 @@ use crate::{transform, uppercase};
 /// ## Example:
 ///
 /// ```rust
-/// use heck::ToShoutyKebabCase;
+/// use spellcraft::ToShoutyKebabCase;
 ///
 /// let sentence = "We are going to inherit the earth.";
 /// assert_eq!(sentence.to_shouty_kebab_case(), "WE-ARE-GOING-TO-INHERIT-THE-EARTH");
@@ -33,7 +33,7 @@ impl ToShoutyKebabCase for str {
 /// ## Example:
 ///
 /// ```
-/// use heck::AsShoutyKebabCase;
+/// use spellcraft::AsShoutyKebabCase;
 ///
 /// let sentence = "We are going to inherit the earth.";
 /// assert_eq!(format!("{}", AsShoutyKebabCase(sentence)), "WE-ARE-GOING-TO-INHERIT-THE-EARTH");

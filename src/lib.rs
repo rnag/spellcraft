@@ -91,7 +91,7 @@ fn spellcraft(m: &Bound<'_, PyModule>) -> PyResult<()> {
 /// In snake_case, word boundaries are indicated by underscores.
 ///
 /// Example:
-///     >>> from pyheck import snake
+///     >>> from spellcraft import snake
 ///     >>> snake("We carry a new world here, in our hearts.")
 ///     'we_carry_a_new_world_here_in_our_hearts'
 #[pyfunction]
@@ -105,7 +105,7 @@ fn snake(s: &str) -> String {
 /// In snake_case, word boundaries are indicated by underscores.
 ///
 /// Example:
-///     >>> from pyheck import snake_many
+///     >>> from spellcraft import snake_many
 ///     >>> snake_many(["DeviceType", "fooBar"])
 ///     ['device_type', 'foo_bar']
 // #[pyfunction]
@@ -120,7 +120,7 @@ fn snake(s: &str) -> String {
 /// excepting the first word.
 ///
 /// Example:
-///     >>> from pyheck import lower_camel
+///     >>> from spellcraft import lower_camel
 ///     >>> lower_camel("It is we who built these palaces and cities.")
 ///     'itIsWeWhoBuiltThesePalacesAndCities'
 #[pyfunction]
@@ -135,7 +135,7 @@ fn lower_camel(s: &str) -> String {
 /// excepting the first word.
 ///
 /// Example:
-///     >>> from pyheck import lower_camel_many
+///     >>> from spellcraft import lower_camel_many
 ///     >>> lower_camel_many(["It is we", "who built these"])
 ///     ['itIsWe', 'whoBuiltThese']
 // #[pyfunction]
@@ -153,7 +153,7 @@ fn lower_camel(s: &str) -> String {
 /// capitalized.
 ///
 /// Example:
-///     >>> from pyheck import title
+///     >>> from spellcraft import title
 ///     >>> title("We have always lived in slums and holes in the wall.")
 ///     'We Have Always Lived In Slums And Holes In The Wall'
 #[pyfunction]
@@ -168,7 +168,7 @@ fn title(s: &str) -> String {
 /// capitalized.
 ///
 /// Example:
-///     >>> from pyheck import title_many
+///     >>> from spellcraft import title_many
 ///     >>> title_many(["We have always", "lived in slums"])
 ///     ['We Have Always', 'Lived In Slums']
 // #[pyfunction]
@@ -183,7 +183,7 @@ fn title(s: &str) -> String {
 /// including the first word.
 ///
 /// Example:
-///     >>> from pyheck import upper_camel
+///     >>> from spellcraft import upper_camel
 ///     >>> upper_camel("We are not in the least afraid of ruins.")
 ///     'WeAreNotInTheLeastAfraidOfRuins'
 #[pyfunction]
@@ -198,7 +198,7 @@ fn upper_camel(s: &str) -> String {
 /// including the first word.
 ///
 /// Example:
-///     >>> from pyheck import upper_camel_many
+///     >>> from spellcraft import upper_camel_many
 ///     >>> upper_camel_many(["We are not", "in the least"])
 ///     ['WeAreNot', 'InTheLeast']
 // #[pyfunction]
@@ -215,7 +215,7 @@ fn upper_camel(s: &str) -> String {
 /// In kebab-case, word boundaries are indicated by hyphens.
 ///
 /// Example:
-///     >>> from pyheck import kebab
+///     >>> from spellcraft import kebab
 ///     >>> kebab("We are going to inherit the earth.")
 ///     'we-are-going-to-inherit-the-earth'
 #[pyfunction]
@@ -229,7 +229,7 @@ fn kebab(s: &str) -> String {
 /// In kebab-case, word boundaries are indicated by hyphens.
 ///
 /// Example:
-///     >>> from pyheck import kebab_many
+///     >>> from spellcraft import kebab_many
 ///     >>> kebab_many(["We are going", "to inherit the earth."])
 ///     ['we-are-going', 'to-inherit-the-earth']
 // #[pyfunction]
@@ -244,7 +244,7 @@ fn kebab(s: &str) -> String {
 /// words are in uppercase.
 ///
 /// Example:
-///     >>> from pyheck import shouty_kebab
+///     >>> from spellcraft import shouty_kebab
 ///     >>> shouty_kebab("We are going to inherit the earth.")
 ///     'WE-ARE-GOING-TO-INHERIT-THE-EARTH'
 #[pyfunction]
@@ -259,7 +259,7 @@ fn shouty_kebab(s: &str) -> String {
 /// words are in uppercase.
 ///
 /// Example:
-///     >>> from pyheck import shouty_kebab_many
+///     >>> from spellcraft import shouty_kebab_many
 ///     >>> shouty_kebab_many(["We are going", "to inherit the earth."])
 ///     ['WE-ARE-GOING', 'TO-INHERIT-THE-EARTH']
 // #[pyfunction]
@@ -277,7 +277,7 @@ fn shouty_kebab(s: &str) -> String {
 /// words are in uppercase.
 ///
 /// Example:
-///     >>> from pyheck import shouty_snake
+///     >>> from spellcraft import shouty_snake
 ///     >>> shouty_snake("That world is growing in this minute.")
 ///     'THAT_WORLD_IS_GROWING_IN_THIS_MINUTE'
 #[pyfunction]
@@ -292,7 +292,7 @@ fn shouty_snake(s: &str) -> String {
 /// words are in uppercase.
 ///
 /// Example:
-///     >>> from pyheck import shouty_snake_many
+///     >>> from spellcraft import shouty_snake_many
 ///     >>> shouty_snake_many(["That world is", "growing in this minute."])
 ///     ['THAT_WORLD_IS', 'GROWING_IN_THIS_MINUTE']
 // #[pyfunction]

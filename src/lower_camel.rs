@@ -15,7 +15,7 @@ use crate::{capitalize, lowercase, transform};
 /// ## Example:
 ///
 /// ```rust
-/// use heck::ToLowerCamelCase;
+/// use spellcraft::ToLowerCamelCase;
 ///
 /// let sentence = "It is we who built these palaces and cities.";
 /// assert_eq!(sentence.to_lower_camel_case(), "itIsWeWhoBuiltThesePalacesAndCities");
@@ -36,7 +36,7 @@ impl ToLowerCamelCase for str {
 /// ## Example:
 ///
 /// ```
-/// use heck::AsLowerCamelCase;
+/// use spellcraft::AsLowerCamelCase;
 ///
 /// let sentence = "It is we who built these palaces and cities.";
 /// assert_eq!(format!("{}", AsLowerCamelCase(sentence)), "itIsWeWhoBuiltThesePalacesAndCities");

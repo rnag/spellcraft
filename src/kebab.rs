@@ -11,7 +11,7 @@ use crate::{lowercase, transform};
 /// ## Example:
 ///
 /// ```rust
-/// use heck::ToKebabCase;
+/// use spellcraft::ToKebabCase;
 ///
 /// let sentence = "We are going to inherit the earth.";
 /// assert_eq!(sentence.to_kebab_case(), "we-are-going-to-inherit-the-earth");
@@ -32,7 +32,7 @@ impl ToKebabCase for str {
 /// ## Example:
 ///
 /// ```
-/// use heck::AsKebabCase;
+/// use spellcraft::AsKebabCase;
 ///
 /// let sentence = "We are going to inherit the earth.";
 /// assert_eq!(format!("{}", AsKebabCase(sentence)), "we-are-going-to-inherit-the-earth");

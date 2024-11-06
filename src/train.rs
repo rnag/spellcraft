@@ -12,7 +12,7 @@ use crate::{capitalize, transform};
 /// ## Example:
 ///
 /// ```rust
-/// use heck::ToTrainCase;
+/// use spellcraft::ToTrainCase;
 ///
 /// let sentence = "We are going to inherit the earth.";
 /// assert_eq!(sentence.to_train_case(), "We-Are-Going-To-Inherit-The-Earth");
@@ -33,7 +33,7 @@ impl ToTrainCase for str {
 /// ## Example:
 ///
 /// ```
-/// use heck::AsTrainCase;
+/// use spellcraft::AsTrainCase;
 ///
 /// let sentence = "We are going to inherit the earth.";
 /// assert_eq!(format!("{}", AsTrainCase(sentence)), "We-Are-Going-To-Inherit-The-Earth");

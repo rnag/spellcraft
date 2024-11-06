@@ -12,7 +12,7 @@ use crate::{transform, uppercase};
 /// ## Example:
 ///
 /// ```rust
-/// use heck::ToShoutySnakeCase;
+/// use spellcraft::ToShoutySnakeCase;
 ///
 /// let sentence = "That world is growing in this minute.";
 /// assert_eq!(sentence.to_shouty_snake_case(), "THAT_WORLD_IS_GROWING_IN_THIS_MINUTE");
@@ -22,7 +22,7 @@ pub trait ToShoutySnakeCase: ToOwned {
     fn to_shouty_snake_case(&self) -> Self::Owned;
 }
 
-/// Oh heck, `ToShoutySnekCase` is an alias for [`ToShoutySnakeCase`]. See
+/// Oh spellcraft, `ToShoutySnekCase` is an alias for [`ToShoutySnakeCase`]. See
 /// ToShoutySnakeCase for more documentation.
 pub trait ToShoutySnekCase: ToOwned {
     /// CONVERT THIS TYPE TO SNEK CASE.
@@ -47,7 +47,7 @@ impl ToShoutySnakeCase for str {
 /// ## Example:
 ///
 /// ```
-/// use heck::AsShoutySnakeCase;
+/// use spellcraft::AsShoutySnakeCase;
 ///
 /// let sentence = "That world is growing in this minute.";
 /// assert_eq!(format!("{}", AsShoutySnakeCase(sentence)), "THAT_WORLD_IS_GROWING_IN_THIS_MINUTE");

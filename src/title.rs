@@ -15,7 +15,7 @@ use crate::{capitalize, transform};
 /// ## Example:
 ///
 /// ```rust
-/// use heck::ToTitleCase;
+/// use spellcraft::ToTitleCase;
 ///
 /// let sentence = "We have always lived in slums and holes in the wall.";
 /// assert_eq!(sentence.to_title_case(), "We Have Always Lived In Slums And Holes In The Wall");
@@ -36,7 +36,7 @@ impl ToTitleCase for str {
 /// ## Example:
 ///
 /// ```
-/// use heck::AsTitleCase;
+/// use spellcraft::AsTitleCase;
 ///
 /// let sentence = "We have always lived in slums and holes in the wall.";
 /// assert_eq!(format!("{}", AsTitleCase(sentence)), "We Have Always Lived In Slums And Holes In The Wall");

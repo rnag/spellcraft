@@ -13,7 +13,7 @@ use crate::{lowercase, transform};
 /// ## Example:
 ///
 /// ```rust
-/// use heck::ToSnakeCase;
+/// use spellcraft::ToSnakeCase;
 ///
 /// let sentence = "We carry a new world here, in our hearts.";
 /// assert_eq!(sentence.to_snake_case(), "we_carry_a_new_world_here_in_our_hearts");
@@ -23,7 +23,7 @@ pub trait ToSnakeCase: ToOwned {
     fn to_snake_case(&self) -> Self::Owned;
 }
 
-/// Oh heck, `SnekCase` is an alias for [`ToSnakeCase`]. See ToSnakeCase for
+/// Oh spellcraft, `SnekCase` is an alias for [`ToSnakeCase`]. See ToSnakeCase for
 /// more documentation.
 pub trait ToSnekCase: ToOwned {
     /// Convert this type to snek case.
@@ -47,7 +47,7 @@ impl ToSnakeCase for str {
 /// ## Example:
 ///
 /// ```
-/// use heck::AsSnakeCase;
+/// use spellcraft::AsSnakeCase;
 ///
 /// let sentence = "We carry a new world here, in our hearts.";
 /// assert_eq!(format!("{}", AsSnakeCase(sentence)), "we_carry_a_new_world_here_in_our_hearts");
